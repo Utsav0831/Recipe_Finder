@@ -1,0 +1,65 @@
+<div class="container">
+    <a href="#" id="login_btn" (click)="openLform()">Login</a>
+    <a href="#" id="register_btn" (click)="openRform()">Register</a>
+
+    <h3 (click)="reload();">Recipe<b>Finder</b></h3>
+</div>
+
+<div class="user_container">
+    <a href="#" (click)="show_profile($event)" id="pp">
+        <img src="https://cdn4.iconfinder.com/data/icons/avatars-2-12/512/Avatar_2-16-256.png" alt="">
+    </a>
+
+    <h3>Recipe<b>Finder</b></h3>
+</div>
+
+<div class="login">
+    <form>
+        <h4>Recipe<b>Finder</b></h4>
+        <img src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/close_red.png" id="close" (click)="closeform()">
+        <h2>Welcome back</h2>
+        <img src="../../assets/login.gif" alt="">
+        <label for="email">Email or Username</label>
+        <input type="text" value="someUsername@email.com" id="email" name="email">
+
+        <label for="password">Password</label>
+        <input type="password" value="password" id="password" name="password">
+
+        <button (click)="enterLogin($event)">Login</button>
+
+        <p>Not a member yet? <a href="#" (click)="openRform()">Register Here</a></p>
+    </form>
+</div>
+
+<div class="register">
+    <form>
+        <h4>Recipe<b>Finder</b></h4>
+        <img src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/close_red.png" id="close" (click)="closeform()">
+        <h2>Welcome to Recipe<b>Finder</b></h2>
+        <img src="https://i.pinimg.com/originals/03/64/eb/0364eb47780aa9e4b12d9d5e9aa10c57.gif" alt="">
+
+        <label for="username">Userame</label>
+        <input type="text" value="someUsername" id="username" name="username">
+
+        <label for="email">Email</label>
+        <input type="text" value="someusername@email.com" id="email" name="email">
+
+        <label for="password">Create Password</label>
+        <input type="password" value="password" id="password" name="password">
+
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" value="password" id="cpassword" name="cpassword">
+
+        <button (click)="enterLogin($event)">Register</button>
+
+        <p>Already a member? <a href="#" (click)="openLform()">Login Here</a></p>
+    </form>
+</div>
+
+
+<div class="profile">
+    <p>someUser</p>
+    <a href="#" (click)="toggleComponents()">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#" (click)="exitLogin($event)" id="logout">Logout</a>
+</div>

@@ -1,0 +1,215 @@
+.container, .user_container{
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 70px;
+    width: 100%;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+}
+
+.user_container{
+    display: none;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+    padding: 1.2%;
+    padding-top: .7%;
+    border-radius: 10px;
+    height: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1%;
+    font-weight: 500;
+}
+
+.container a:nth-child(odd){
+    color: white;
+    background-color: rgb(243, 140, 16);
+}
+
+.container a:hover{
+    opacity: 0.85;
+    font-weight: 700;
+}
+
+.container h3, .user_container h3{
+    position: absolute;
+    left: 1%;
+    cursor: pointer;
+}
+
+.container h3 b, .user_container h3 b{
+    color: #F38C10;
+    font-size: larger;
+}
+
+
+.login, .register{
+    display: none;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height:950%;
+    backdrop-filter: blur(15px);
+}
+
+.login form, .register form{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    width: 30%;
+    min-width: 400px;
+    height: 90%;
+    top: 012%;
+    padding: 2%;
+}
+
+.login form img, .register form img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.register form{
+    overflow-y: scroll;
+}
+
+.login form input, .login form button, .register form input, .register form button{
+    padding: 2%;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.login form button, .register form button{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    border-width: 0px;
+    background-color: rgb(243, 140, 16);
+    color: white;
+}
+
+.login form button:hover, .register form button:hover{
+    background-color: rgb(203, 119, 17);
+}
+
+.login form h2, .register form h2{
+    text-align: center;
+}
+
+.register form h2 b{
+    color: rgb(243, 140, 16);
+    font-size: 105%;
+}
+
+.login form h4, .register form h4{
+    position: absolute;
+    top: 0;
+    left: 3%;
+    font-size: x-small;
+}
+
+.login form h4 b, .register form h4 b{
+    color: rgb(243, 140, 16);
+    font-size: small;
+}
+
+.login form p, .register form p{
+    font-size: small;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.login form p a, .register form p a{
+    color: black;
+    text-decoration: underline;
+    background-color: white;
+    
+}
+
+.login form p a:hover, .register form p a:hover{
+    color: rgb(243, 140, 16);
+}
+
+#close{
+    position: absolute;
+    filter: grayscale(100%);
+    width: 5%;
+    right: 2%;
+    top: 1%;
+}
+
+#close:hover{
+    filter: grayscale(0%);
+}
+
+.user_container a{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-right: 1.5%;
+}
+
+.user_container a:hover{
+    border-color: rgb(203, 119, 17);
+    border-style: solid;
+}
+
+.user_container a img{
+    width: 100%;
+}
+
+.profile{
+    position: absolute;
+    top: 75px;
+    right: 1%;
+    width: 15%;
+    padding: 10px;
+    padding-top: 5px;
+    background-color: rgba(255, 255, 255, 0.93);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.profile p{
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+}
+
+.profile a{
+    text-decoration: none;
+    color: black;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 3%;
+    padding: 2%;
+    border-radius: 05px;
+}
+
+.profile a:hover{
+    background-color: rgba(0,0,0,0.06);
+    color: rgb(243, 140, 16);
+}
+
+
+
+

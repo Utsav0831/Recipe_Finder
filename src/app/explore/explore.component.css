@@ -1,0 +1,128 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    padding-top: 10px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h3{
+    font-weight: 600;
+}
+
+.content{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    padding: .5%;
+    transition: 0.8s ease-in;
+}
+
+figure{
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    margin: 0;
+    margin-right: 3%;
+    overflow: hidden;
+}
+
+figure img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+figcaption{
+    color: white;
+    position: absolute;
+    top: 0%;
+    padding: 2%;
+    padding-top:45% ;
+    background-color: rgba(0,0,0,0.4);
+    width: 300px;
+    height: 90%;
+}
+
+figure:hover{
+    box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.3);
+    color: rgb(243, 140, 16);
+    font-weight: 600;
+}
+
+figure p{
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    font-size: small;
+    font-weight: 400;
+    color: rgba(255,255,255,.7);
+}
+
+figure h4{
+    position: absolute;
+    bottom: 1%;
+    width: 10%;
+}
+
+figure h4 img{
+    width: 100%;
+}
+
+.icons{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 5%;
+    padding: 1%;
+    padding-bottom: 0;
+}
+
+#next{
+    display: block;
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 30%;
+    padding: .7%;
+}
+
+#next:hover{
+    background-color: rgba(0,0,0,.6);
+    
+}
+
+#next img{
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+#prev{
+    display: none;
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 30%;
+    padding: .7%;
+    transform: scaleX(-1);
+}
+
+#prev img{
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+}
+
+#prev:hover{
+    background-color: rgba(0,0,0,.6);
+    
+}

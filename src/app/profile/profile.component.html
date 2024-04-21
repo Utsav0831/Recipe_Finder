@@ -1,0 +1,53 @@
+<div id="myProfile">
+  <img src="https://cdn0.iconfinder.com/data/icons/uiux-001-line/32/UI_UX_UIUX_Back-256.png" id="backBtn" (click)="resetToDefault()">
+    <div id="myRecipes">
+        <h3>My Recipes</h3>
+
+        <figure>
+            <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/office-322/24/delete-recycle-bin-trash-garbage-256.png" alt="delete"></a>
+            <a href="#"><img src="https://cdn0.iconfinder.com/data/icons/set-app-incredibles/24/Edit-01-256.png" alt=""></a>
+            <img src="https://images2.alphacoders.com/135/1353005.png" alt="">
+            <figcaption>Burger</figcaption>
+
+        </figure>
+
+
+        <div *ngIf="submitted">
+
+
+            <figure>
+                <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/office-322/24/delete-recycle-bin-trash-garbage-256.png" alt="delete"></a>
+                <a href="#"><img src="https://cdn0.iconfinder.com/data/icons/set-app-incredibles/24/Edit-01-256.png" alt=""></a>
+                <img [src]="imageUrl" alt="Selected Image" style="max-width: 300px; height: auto;">
+                <figcaption>{{ recipeForm.value.recipeTitle }}</figcaption>
+    
+            </figure>
+
+    </div>
+
+
+    <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Plus-256.png" id="addrecipe" (click)="openForm()">
+</div>
+
+<div class="addRcp">
+    <form (ngSubmit)="onSubmit()" [formGroup]="recipeForm">
+        <img src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/close_red.png" id="close_btn" (click)="closeForm()">
+        <h3>Add a Recipe</h3>
+        <label for="recipeTitle">Title</label>
+        <input type="text" formControlName="recipeTitle" placeholder="A Title for your Recipe">
+
+        <label for="recipeIngredients">Ingredients</label>
+        <textarea [(ngModel)]="listItems" formControlName="recipeIngredients" placeholder="Enter Each Items on a New Line" rows="10"></textarea>
+
+        <label for="recipeImage">Add Image</label>
+        <input type="file" (change)="onFileSelected($event)">
+
+
+        <div *ngIf="selectedFile">
+            <h3>Selected Image Preview:</h3>
+            <img [src]="imageUrl" alt="Selected Image" style="max-width: 300px; height: auto; margin: auto;">
+          </div>
+
+        <button type="submit" [disabled]="!recipeForm.valid">Add</button>
+    </form>
+</div>

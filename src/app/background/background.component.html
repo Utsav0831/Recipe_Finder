@@ -1,0 +1,51 @@
+<div class="container">
+    <a href="#" id="hash"></a>
+  <h1>Explore  <b>Cook</b> Enjoy</h1>
+
+  <div class="search">
+    <form (submit)="searchRecipes()">
+      <input type="text" placeholder="Hungry for ideas? Search here..." name="item" id="item" [(ngModel)]="searchItem">
+      <button type="submit" id="submit" >
+        <img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-256.png" alt="" >
+      </button>
+    </form>
+  </div>
+  
+</div>
+
+<div *ngIf="showLoading && searchResults.length===0">
+  <p style="text-align: center;">Searching for "{{ searchItem }}"...</p>
+  <img src="https://www.amoudfoundation.org/wp-content/uploads/2020/07/loading-gif-png-5.gif" style="width: 10%; margin-left: 45%;">
+
+</div>
+
+<div *ngIf="searchResults.length===0 && noResults">
+  <p style="text-align: center;">No results for "{{ searchItem }}"...</p>
+</div>
+
+<div id="results" *ngIf="searchResults.length > 0">
+  <h3>Search Results</h3>
+  <figure *ngFor="let recipe of searchResults" (click)="handleFigureClick(recipe)">
+      <img [src]="recipe.recipe.image" alt="{{ recipe.recipe.label }}">
+      <figcaption>{{ recipe.recipe.label }}</figcaption>
+      <p>{{ recipe.recipe.source }}</p>
+
+      
+  </figure>
+
+  
+</div>
+
+<div class="recipeDetail" *ngIf="selectedRecipeLabel && selectedRecipeSrc">
+  <a href="#" id="back_btn" (click)="selectedRecipeLabel = ''; selectedRecipeSrc = ''; selectedRecipeIngredients = [];goBack($event)">
+    <img id="backk" src="https://cdn2.iconfinder.com/data/icons/arrows-and-universal-actions-icon-set/256/arrow_left_circle-256.png" >
+  </a>
+  <img [src]="selectedRecipeSrc" alt="{{ selectedRecipeLabel }}">
+  <div class="ingredients">
+    <h2>{{ selectedRecipeLabel }}</h2>
+    <ul>
+      <li *ngFor="let ingredient of selectedRecipeIngredients">{{ ingredient }}</li>
+    </ul>
+  </div>
+  
+</div>

@@ -1,0 +1,180 @@
+.container{
+    position: relative;
+    background-color: black;
+    background-image: url("../../assets/Yummy-Chocolate-Cake-HD-Desktop-Wallpaper-46983.jpg");
+    background-size: cover;
+    background-position: 10%;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    z-index: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1{
+    position: absolute;
+    padding-top: 5%;
+    color: white;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+
+h1 b{
+    margin-left: 1%;
+    margin-right: 1%;
+    color: #F38C10;
+    font-size: 105%;
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    padding-left: 1.5%;
+    border-radius: 10px;
+}
+
+#submit{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 15%;
+    right: 0%;
+    border: 0;
+    background-color: transparent;
+}
+
+#submit img{
+    width: 90%;
+    opacity: 0.6;
+}
+
+#submit img:hover{
+    opacity: 1;
+}
+
+.search{
+    position: absolute;
+    width: 40%;
+    height: 25px;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#results{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#results h3{
+    width: 100%;
+}
+
+
+figure{
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-right: 3%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+figure img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+figcaption{
+    color: white;
+    position: absolute;
+    top: 0%;
+    padding: 2%;
+    padding-top:45% ;
+    background-color: rgba(0,0,0,0.4);
+    width: 300px;
+    height: 90%;
+}
+
+figure:hover{
+    box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.3);
+    color: rgb(243, 140, 16);
+    font-weight: 600;
+}
+
+figure p{
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    font-size: small;
+    font-weight: 400;
+    color: rgba(255,255,255,.7);
+}
+
+figure h4{
+    position: absolute;
+    bottom: 1%;
+    width: 10%;
+}
+
+figure h4 img{
+    width: 100%;
+}
+
+.recipeDetail{
+    display: flex;
+}
+
+.recipeDetail img{
+    width: 500px;
+    height: 300px;
+    padding: 15px;
+    border-radius: 40px;
+    margin-top: 4%;
+    margin-left: 4%;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.ingredients li{
+    margin-bottom: 5%;
+    font-weight: 400;
+}
+
+#back_btn{
+    position: absolute;
+    width: 100%;
+    left: 1%;
+    margin-bottom: 3%;
+}
+
+#backk{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+#backk:hover{
+    filter: invert(35%);
+}
